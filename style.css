@@ -1,18 +1,26 @@
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --primary: #007bff;
+    --success: #2ea44f;
+}
+
+body.dark {
+    --bg: #0d1117;
+    --text: #c9d1d9;
+}
+
 body {
-    font-family: sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
-    transition: 0.3s; /* Smooth color change */
-}
-
-/* Dark Mode Styles */
-body.dark {
-    background-color: #1a1a1a;
-    color: white;
+    transition: 0.3s ease;
 }
 
 nav {
@@ -23,12 +31,32 @@ nav {
     justify-content: space-between;
 }
 
+.button-group {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #007bff;
-    color: white;
+    padding: 12px 24px;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-feedback { background: var(--success); color: white; }
+
+#theme-toggle {
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--text);
+    background: transparent;
+    color: var(--text);
 }

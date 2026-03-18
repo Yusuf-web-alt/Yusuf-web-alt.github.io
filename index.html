@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yusuf | Official</title>
-    <!-- This line "calls" your CSS file -->
+    <title>Yusuf | Official Site</title>
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
         <div class="logo">Yusuf</div>
-        <button id="theme-toggle">🌙 Switch Theme</button>
+        <button id="theme-toggle">🌙 Theme</button>
     </nav>
 
     <main>
-        <h1>Welcome to my site</h1>
-        <p>I'm building this on GitHub Pages!</p>
-        <div class="links">
-            <a href="https://github.com/Yusuf-web-alt" class="btn">My GitHub</a>
+        <!-- The typewriter effect targets this ID -->
+        <h1 id="typewriter"></h1>
+        <p>Building the official Yusuf-web-alt experience.</p>
+
+        <div class="button-group">
+            <a href="https://github.com" class="btn btn-primary">My GitHub</a>
+            
+            <!-- Feedback link pointing to your Issues page -->
+            <a href="https://github.com/Yusuf-web-alt.github.io/issues/new" 
+               target="_blank" 
+               class="btn btn-feedback">
+               Send Feedback
+            </a>
         </div>
     </main>
 
-    <!-- This line "calls" your JavaScript file -->
+    <!-- Link to your JS file at the bottom -->
     <script src="script.js"></script>
 </body>
 </html>

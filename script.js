@@ -1,14 +1,27 @@
-const btn = document.getElementById('theme-toggle');
+// --- Typewriter Logic ---
+const textElement = document.getElementById('typewriter');
+const message = "Hi, I'm Yusuf.";
+let charIndex = 0;
 
-// When the button is clicked...
-btn.addEventListener('click', () => {
-    // Add or remove the "dark" class from the body
+function typeWriter() {
+    if (charIndex < message.length) {
+        textElement.innerHTML += message.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, 120); 
+    }
+}
+
+// --- Theme Toggle Logic ---
+const themeBtn = document.getElementById('theme-toggle');
+themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     
-    // Change the button text based on the mode
     if (document.body.classList.contains('dark')) {
-        btn.textContent = "☀️ Light Mode";
+        themeBtn.textContent = "☀️ Light";
     } else {
-        btn.textContent = "🌙 Dark Mode";
+        themeBtn.textContent = "🌙 Dark";
     }
 });
+
+// Run typewriter when page loads
+window.onload = typeWriter;
