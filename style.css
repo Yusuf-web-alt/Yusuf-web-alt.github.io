@@ -1,62 +1,69 @@
 :root {
-    --bg: #ffffff;
-    --text: #1a1a1a;
-    --primary: #007bff;
-    --success: #2ea44f;
-}
-
-body.dark {
-    --bg: #0d1117;
-    --text: #c9d1d9;
+    --bg: #e0e5ec;
+    --shadow-dark: #a3b1c6;
+    --shadow-light: #ffffff;
+    --text: #444746;
 }
 
 body {
     background-color: var(--bg);
     color: var(--text);
-    font-family: -apple-system, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
-    transition: 0.3s ease;
 }
 
-nav {
-    position: absolute;
-    top: 20px;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
+/* The "Soft" Card Container */
+.soft-card {
+    background: var(--bg);
+    padding: 3rem;
+    border-radius: 40px;
+    box-shadow: 20px 20px 60px var(--shadow-dark),
+               -20px -20px 60px var(--shadow-light);
+    text-align: center;
 }
 
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    min-height: 1.2em; /* Prevents jumping while typing */
+}
+
+.subtitle {
+    font-weight: 500;
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+
+/* Soft Pill-Shaped Buttons */
 .button-group {
-    margin-top: 25px;
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    justify-content: center;
 }
 
-.btn {
-    padding: 12px 24px;
+.soft-btn {
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: transform 0.2s;
-}
-
-.btn:hover {
-    transform: scale(1.05);
-}
-
-.btn-primary { background: var(--primary); color: white; }
-.btn-feedback { background: var(--success); color: white; }
-
-#theme-toggle {
-    cursor: pointer;
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: 1px solid var(--text);
-    background: transparent;
     color: var(--text);
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: var(--bg);
+    box-shadow: 6px 6px 12px var(--shadow-dark),
+               -6px -6px 12px var(--shadow-light);
+    transition: all 0.2s ease;
+}
+
+.soft-btn:hover {
+    transform: translateY(-2px);
+    color: #007bff; /* Soft blue hint on hover */
+}
+
+.soft-btn:active {
+    box-shadow: inset 4px 4px 8px var(--shadow-dark),
+                inset -4px -4px 8px var(--shadow-light);
+    transform: translateY(0);
 }

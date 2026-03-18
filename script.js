@@ -1,27 +1,14 @@
-// --- Typewriter Logic ---
-const textElement = document.getElementById('typewriter');
 const message = "Hi, I'm Yusuf.";
-let charIndex = 0;
+let i = 0;
 
 function typeWriter() {
-    if (charIndex < message.length) {
-        textElement.innerHTML += message.charAt(charIndex);
-        charIndex++;
-        setTimeout(typeWriter, 120); 
+    if (i < message.length) {
+        document.getElementById("typewriter").innerHTML += message.charAt(i);
+        i++;
+        // 120ms is a nice, natural typing speed
+        setTimeout(typeWriter, 120);
     }
 }
 
-// --- Theme Toggle Logic ---
-const themeBtn = document.getElementById('theme-toggle');
-themeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    
-    if (document.body.classList.contains('dark')) {
-        themeBtn.textContent = "☀️ Light";
-    } else {
-        themeBtn.textContent = "🌙 Dark";
-    }
-});
-
-// Run typewriter when page loads
+// Tells the browser to start the function as soon as the page loads
 window.onload = typeWriter;
