@@ -19,17 +19,18 @@ body {
 /* The "Soft" Card Container */
 .soft-card {
     background: var(--bg);
-    padding: 3rem;
+    padding: 3.5rem;
     border-radius: 40px;
     box-shadow: 20px 20px 60px var(--shadow-dark),
                -20px -20px 60px var(--shadow-light);
     text-align: center;
+    max-width: 90%;
 }
 
 h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    min-height: 1.2em; /* Prevents jumping while typing */
+    min-height: 1.2em;
 }
 
 .subtitle {
@@ -45,6 +46,14 @@ h1 {
     justify-content: center;
 }
 
+/* Responsive buttons for mobile */
+@media (max-width: 600px) {
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .soft-btn {
     text-decoration: none;
     color: var(--text);
@@ -58,12 +67,20 @@ h1 {
 }
 
 .soft-btn:hover {
-    transform: translateY(-2px);
-    color: #007bff; /* Soft blue hint on hover */
+    transform: translateY(-3px);
+    color: #007bff;
 }
 
 .soft-btn:active {
     box-shadow: inset 4px 4px 8px var(--shadow-dark),
                 inset -4px -4px 8px var(--shadow-light);
     transform: translateY(0);
+}
+
+/* The Subtle Firefox Note */
+.browser-note {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    opacity: 0.4;
+    font-style: italic;
 }
