@@ -12,11 +12,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
 }
 
-/* The "Soft" Card Container */
 .soft-card {
     background: var(--bg);
     padding: 3.5rem;
@@ -39,15 +38,13 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* Soft Pill-Shaped Buttons */
 .button-group {
     display: flex;
     gap: 20px;
     justify-content: center;
-    flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
-/* Responsive buttons for mobile */
 @media (max-width: 600px) {
     .button-group {
         flex-direction: column;
@@ -72,11 +69,17 @@ h1 {
     color: #007bff;
 }
 
-/* Pressed effect when clicked */
 .soft-btn:active {
     box-shadow: inset 4px 4px 8px var(--shadow-dark),
                 inset -4px -4px 8px var(--shadow-light);
     transform: translateY(0);
+}
+
+.back-btn {
+    margin-top: 30px;
+    display: inline-block;
+    font-size: 0.9rem;
+    opacity: 0.6;
 }
 
 .browser-note {
