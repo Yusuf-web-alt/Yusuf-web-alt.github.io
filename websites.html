@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Yusuf</title>
+    <link rel="icon" type="image/gif" href="favion.gif">
+    <!-- Reuse your existing style.css to keep the look consistent -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific tweaks for the projects list */
+        .project-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .project-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: inset 4px 4px 10px var(--shadow-dark),
+                        inset -4px -4px 10px var(--shadow-light);
+        }
+
+        .project-name {
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .back-home {
+            margin-top: 40px;
+            display: inline-block;
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: var(--text);
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+
+        .back-home:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="soft-card">
+        <h1>My Websites</h1>
+        <p class="subtitle">A collection of things I've built.</p>
+
+        <div class="project-list">
+            
+            <!-- Project 1 -->
+            <div class="project-item">
+                <span class="project-name">Awesome App 1</span>
+                <!-- Use Githack links here for individual projects -->
+                <a href="https://raw.githack.com" 
+                   target="_blank" class="soft-btn">Launch Site</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item">
+                <span class="project-name">Cool Tool 2</span>
+                <a href="https://raw.githack.com" 
+                   target="_blank" class="soft-btn">Launch Site</a>
+            </div>
+
+        </div>
+
+        <a href="index.html" class="back-home">← Back to Home</a>
+    </main>
+
+</body>
+</html>
