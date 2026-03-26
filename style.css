@@ -44,6 +44,7 @@ h1 {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
 }
 
 /* Responsive buttons for mobile */
@@ -71,13 +72,13 @@ h1 {
     color: #007bff;
 }
 
+/* Pressed effect when clicked */
 .soft-btn:active {
     box-shadow: inset 4px 4px 8px var(--shadow-dark),
                 inset -4px -4px 8px var(--shadow-light);
     transform: translateY(0);
 }
 
-/* The Subtle Firefox Note */
 .browser-note {
     margin-top: 40px;
     font-size: 0.8rem;
